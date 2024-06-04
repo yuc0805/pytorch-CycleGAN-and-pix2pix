@@ -66,3 +66,9 @@ class ColorizationModel(Pix2PixModel):
         """Calculate additional output images for visdom and HTML visualization"""
         self.real_B_rgb = self.lab2rgb(self.real_A, self.real_B)
         self.fake_B_rgb = self.lab2rgb(self.real_A, self.fake_B)
+
+
+
+
+# python datasets/combine_A_and_B.py --fold_A pannels_train_test/dataA --fold_B pannels_train_test/dataB --fold_AB pannels_train_test/dataAB --no_multiprocessing True
+# python train.py --dataroot ./datasets/colorization --name color_pix2pix --model colorization

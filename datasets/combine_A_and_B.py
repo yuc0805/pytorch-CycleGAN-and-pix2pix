@@ -30,6 +30,8 @@ if not args.no_multiprocessing:
     pool=Pool()
 
 for sp in splits:
+    print(sp)
+    if sp[0] == '.': continue
     img_fold_A = os.path.join(args.fold_A, sp)
     img_fold_B = os.path.join(args.fold_B, sp)
     img_list = os.listdir(img_fold_A)
